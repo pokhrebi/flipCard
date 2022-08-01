@@ -1,5 +1,3 @@
-const { Phaser } = require("./phaser.min");
-
 var game;
 var gameOptions = {
   flipSpeed: 200,
@@ -14,7 +12,11 @@ var playGame = function (game){}
 
 playGame.prototype = {
   preload: function() {
-
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.pageAlignHorizontally = true;
+    game.scale.pageAlignVertically = true;
+    game.stage.backgroundColor = 0x448844;
+    game.load.spritesheet("cards", "cards.png", 167, 243);
   },
   create: function() {
 
