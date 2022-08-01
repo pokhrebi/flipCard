@@ -19,7 +19,9 @@ playGame.prototype = {
     game.load.spritesheet("cards", "cards.png", 167, 243);
   },
   create: function() {
-
+    this.card =  game.add.sprite(game.width / 2, game.height / 2, "cards", 0);
+    this.card.anchor.set(0.5);
+    this.card.isFlipping = false;
   },
 
 }
